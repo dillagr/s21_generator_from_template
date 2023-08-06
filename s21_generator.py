@@ -76,7 +76,7 @@ for name in names:
     ## definitions
     outfile = data_dict.pop('outfile')
     input_pdf_path = os.path.join(Path().absolute(), "S-21_E.pdf")
-    output_pdf_path = os.path.join(Path().absolute(), "exported", outfile)
+    output_pdf_path = os.path.join(Path().absolute(), "exported", f"SY{service_year()}-{outfile}")
 
     ## output
     logger.debug(f"Generating: {output_pdf_path}")
