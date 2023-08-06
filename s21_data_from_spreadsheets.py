@@ -111,11 +111,7 @@ def isolate_header_values(publisher_identifier: list) -> dict:
     _ = df_dict.pop('LAST_GIVEN')
     _ = df_dict.pop('REPORT_NAME')
 
-    __TODAY = datetime.now()
-    if __TODAY.month > 8: YEAR = __TODAY.year +1 
-    else: YEAR = __TODAY.year
-
-    df_dict['outfile'] = f"SY{YEAR}-{LAST_NAME}-{GIVEN_NAME}-{MIDDLE_NAME}-S-21_E.pdf".strip().replace(" ","-").replace("--","-")
+    df_dict['outfile'] = f"{LAST_NAME}-{GIVEN_NAME}-{MIDDLE_NAME}-S-21_E.pdf".strip().replace(" ","-").replace("--","-")
     ## return the dictionary
     return df_dict
 
